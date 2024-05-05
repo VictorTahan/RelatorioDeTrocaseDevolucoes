@@ -40,7 +40,7 @@ while True:
             cliente_data_motivo2['status'] = status
             pc.append(cliente_data_motivo2)
             print('Trocas/devoluções cadastradas:')
-            for item in pc:
+            for item in er:
                 print(f'Cliente: {item['cliente']}, Dia: {item['dia']}, Mês: {item['mes']}, Ano: {item['ano']}, Motivo: {item['motivo']}, Vendedora: {item['vendedora']}, Status: {item['status']},frete pago pela loja.')
             menu = int(input("Digite 1 para cadastrar outra troca/devolução.\nDigite qualquer outro número para sair."))
             if menu !=1 :
