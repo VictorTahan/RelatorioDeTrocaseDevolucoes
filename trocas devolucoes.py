@@ -18,8 +18,10 @@ while True:
             cliente_data_motivo1['status'] = status
             pc.append(cliente_data_motivo1)
             print('Trocas/devoluções cadastradas:')
-            for item in pc:
-                 print(f'Cliente: {item['cliente']}, Dia: {item['dia']}, Mês: {item['mes']}, Ano: {item['ano']}, Motivo: {item['motivo']}, Vendedora: {item['vendedora']}, Status: {item['status']}, frete pago pela cliente.')
+            for itempc in pc:
+                 print(f'Cliente: {itempc['cliente']}, Dia: {itempc['dia']}, Mês: {itempc['mes']}, Ano: {itempc['ano']}, Motivo: {itempc['motivo']}, Vendedora: {itempc['vendedora']}, Status: {itempc['status']}, frete pago pela cliente.')
+            for itemer in er:
+                print(f'Cliente: {itemer['cliente']}, Dia: {itemer['dia']}, Mês: {itemer['mes']}, Ano: {itemer['ano']}, Motivo: {itemer['motivo']}, Vendedora: {itemer['vendedora']}, Status: {itemer['status']},frete pago pela loja.')
             menu = int(input("Digite 1 para cadastrar outra troca/devolução.\nDigite qualquer outro número para sair."))
             if menu !=1 :
                 print("Programa finalizado!")
@@ -38,10 +40,12 @@ while True:
             else:
                 status = 'Pendente'
             cliente_data_motivo2['status'] = status
-            pc.append(cliente_data_motivo2)
+            er.append(cliente_data_motivo2)
             print('Trocas/devoluções cadastradas:')
-            for item in pc:
-                print(f'Cliente: {item['cliente']}, Dia: {item['dia']}, Mês: {item['mes']}, Ano: {item['ano']}, Motivo: {item['motivo']}, Vendedora: {item['vendedora']}, Status: {item['status']},frete pago pela loja.')
+            for itempc in pc:
+                print(f'Cliente: {itempc['cliente']}, Dia: {itempc['dia']}, Mês: {itempc['mes']}, Ano: {itempc['ano']}, Motivo: {itempc['motivo']}, Vendedora: {itempc['vendedora']}, Status: {itempc['status']}, frete pago pela cliente.')
+            for itemer in er:
+                print(f'Cliente: {itemer['cliente']}, Dia: {itemer['dia']}, Mês: {itemer['mes']}, Ano: {itemer['ano']}, Motivo: {itemer['motivo']}, Vendedora: {itemer['vendedora']}, Status: {itemer['status']},frete pago pela loja.')
             menu = int(input("Digite 1 para cadastrar outra troca/devolução.\nDigite qualquer outro número para sair."))
             if menu !=1 :
                 print("Programa finalizado!")
