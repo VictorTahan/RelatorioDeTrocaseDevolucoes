@@ -21,7 +21,7 @@ while True:
             for itempc in pc:
                  print(f'Cliente: {itempc['cliente']}, Dia: {itempc['dia']}, Mês: {itempc['mes']}, Ano: {itempc['ano']}, Motivo: {itempc['motivo']}, Vendedora: {itempc['vendedora']}, Status: {itempc['status']}, frete pago pela cliente.')
             for itemer in er:
-                print(f'Cliente: {itemer['cliente']}, Dia: {itemer['dia']}, Mês: {itemer['mes']}, Ano: {itemer['ano']}, Motivo: {itemer['motivo']}, Vendedora: {itemer['vendedora']}, Status: {itemer['status']},frete pago pela loja.')
+                print(f'Cliente: {itemer['cliente']}, Dia: {itemer['dia']}, Mês: {itemer['mes']}, Ano: {itemer['ano']}, Motivo: {itemer['motivo']}, Vendedora: {itemer['vendedora']}, Status: {itemer['status']}, frete pago pela loja.')
             menu = int(input("Digite 1 para cadastrar outra troca/devolução.\nDigite qualquer outro número para sair."))
             if menu !=1 :
                 print("Programa finalizado!")
@@ -45,7 +45,7 @@ while True:
             for itempc in pc:
                 print(f'Cliente: {itempc['cliente']}, Dia: {itempc['dia']}, Mês: {itempc['mes']}, Ano: {itempc['ano']}, Motivo: {itempc['motivo']}, Vendedora: {itempc['vendedora']}, Status: {itempc['status']}, frete pago pela cliente.')
             for itemer in er:
-                print(f'Cliente: {itemer['cliente']}, Dia: {itemer['dia']}, Mês: {itemer['mes']}, Ano: {itemer['ano']}, Motivo: {itemer['motivo']}, Vendedora: {itemer['vendedora']}, Status: {itemer['status']},frete pago pela loja.')
+                print(f'Cliente: {itemer['cliente']}, Dia: {itemer['dia']}, Mês: {itemer['mes']}, Ano: {itemer['ano']}, Motivo: {itemer['motivo']}, Vendedora: {itemer['vendedora']}, Status: {itemer['status']}, frete pago pela loja.')
             menu = int(input("Digite 1 para cadastrar outra troca/devolução.\nDigite qualquer outro número para sair."))
             if menu !=1 :
                 print("Programa finalizado!")
