@@ -11,6 +11,13 @@ def registrar_troca_devolucao_paga_cliente():
     cliente_data_motivo1['vendedora'] = vendedora_entry.get()
     cliente_data_motivo1['status'] = status_var.get()
     pc.append(cliente_data_motivo1)
+    cliente_entry.delete(0, END)
+    dia_entry.delete(0, END)
+    mes_entry.delete(0, END)
+    ano_entry.delete(0, END)
+    motivo_entry.delete(0, END)
+    vendedora_entry.delete(0, END)
+    status_var.set(-1)
     update_display()
 
 def registrar_troca_devolucao_paga_loja():
@@ -23,14 +30,21 @@ def registrar_troca_devolucao_paga_loja():
     cliente_data_motivo2['vendedora'] = vendedora_entry.get()
     cliente_data_motivo2['status'] = status_var.get()
     er.append(cliente_data_motivo2)
+    cliente_entry.delete(0, END)
+    dia_entry.delete(0, END)
+    mes_entry.delete(0, END)
+    ano_entry.delete(0, END)
+    motivo_entry.delete(0, END)
+    vendedora_entry.delete(0, END)
+    status_var.set(-1)
     update_display()
 
 def update_display():
     display_text.delete('1.0',END)
     for itempc in pc:
-        display_text.insert(END, f"-Cliente: {itempc['cliente']}\n-Dia: {itempc['dia']}\n-Mês: {itempc['mes']}\n-Ano: {itempc['ano']}\n-Motivo: {itempc['motivo']}\n-Vendedora: {itempc['vendedora']}\n-Status: {'Resolvido' if itempc['status'] == 1 else 'Pendente'}\n-frete pago pela cliente.\n")
+        display_text.insert(END,f"-Cliente: {itempc['cliente']}\n-Dia: {itempc['dia']}\n-Mês: {itempc['mes']}\n-Ano: {itempc['ano']}\n-Motivo: {itempc['motivo']}\n-Vendedora: {itempc['vendedora']}\n-Status: {'Resolvido' if itempc['status'] == 1 else 'Pendente'}\n-frete pago pela cliente.\n")
     for itemer in er:
-        display_text.insert(END, f"-Cliente: {itemer['cliente']}\n-Dia: {itemer['dia']}\n-Mês: {itemer['mes']}\n-Ano: {itemer['ano']}\n-Motivo: {itemer['motivo']}\n-Vendedora: {itemer['vendedora']}\n-Status: {'Resolvido' if itemer['status'] == 1 else 'Pendente'}\nfrete pago pela loja.\n")
+        display_text.insert(END,f"-Cliente: {itemer['cliente']}\n-Dia: {itemer['dia']}\n-Mês: {itemer['mes']}\n-Ano: {itemer['ano']}\n-Motivo: {itemer['motivo']}\n-Vendedora: {itemer['vendedora']}\n-Status: {'Resolvido' if itemer['status'] == 1 else 'Pendente'}\nfrete pago pela loja.\n")
     
 janela = Tk()
 janela.title("Cadastro de trocas/devoluções")
@@ -69,7 +83,7 @@ Button(janela, text="Registrar Troca/Devolução Paga Cliente", command=registra
 Button(janela, text="Registrar Troca/Devolução Paga Loja", command=registrar_troca_devolucao_paga_loja).grid(row=7, column=1)
 
 #Display de trocas/devoluções
-display_text = Text(janela, height=10, width=60)
+display_text = Text(janela, height=20, width=80)
 display_text.grid(row=8, columnspan=3)
 
 janela.mainloop()
